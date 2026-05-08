@@ -6,7 +6,7 @@ const Logo = () => {
         <div className="size-8 rounded-lg bg-primary flex items-center justify-center">
             <SparkleIcon className="size-4 text-primary-foreground" />
         </div>
-        <span className="text-lg font-bold">i<span className="text-purple-600">Built</span>This</span>
+        <span className="text-lg font-bold">Tech<span className="text-purple-600">Tokha</span></span>
     </Link>
 }
 
@@ -20,7 +20,7 @@ export default function Footer() {
                     <div className="flex flex-col gap-3 max-w-xs">
                         <Logo />
                         <p className="text-sm text-muted-foreground">
-                            A platform to showcase and discover projects built by developers around the world. Share what you've built and get inspired by others.
+                            TechTokha is a full-service digital agency crafting bold brands, powerful web experiences, and smart tech solutions for businesses that want to grow.
                         </p>
                     </div>
 
@@ -32,9 +32,13 @@ export default function Footer() {
                                 <HomeIcon className="size-4" />
                                 <span>Home</span>
                             </Link>
-                            <Link href="/explore" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                            <Link href="/services" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                 <CompassIcon className="size-4" />
-                                <span>Explore</span>
+                                <span>Services</span>
+                            </Link>
+                            <Link href="/work" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <SparkleIcon className="size-4" />
+                                <span>Our Work</span>
                             </Link>
                         </nav>
                     </div>
@@ -47,9 +51,9 @@ export default function Footer() {
                                 <PhoneIcon className="size-4" />
                                 <span>+1 (234) 567-890</span>
                             </a>
-                            <a href="mailto:hello@ibuiltthis.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                            <a href="mailto:hello@techtokha.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                 <MailIcon className="size-4" />
-                                <span>hello@ibuiltthis.com</span>
+                                <span>hello@techtokha.com</span>
                             </a>
                         </div>
                         <h4 className="text-sm font-semibold mt-2">Follow Us</h4>
@@ -70,7 +74,7 @@ export default function Footer() {
 
                 {/* Bottom bar */}
                 <div className="mt-10 border-t pt-6 text-center text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} iBuiltThis. All rights reserved.
+                    © {new Date().getFullYear()} TechTokha. All rights reserved.
                 </div>
             </div>
         </footer>

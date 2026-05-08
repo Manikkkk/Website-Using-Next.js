@@ -15,7 +15,7 @@ const LiveBadge = () => {
                 rounded-full h-2 w-2 bg-primary" />
             </span>
             <span className="text-muted-foreground">
-                Join thousands of creators sharing their work
+                Trusted by 500+ businesses worldwide
             </span>
         </Badge>
     );
@@ -24,22 +24,20 @@ const LiveBadge = () => {
 const statsData = [
     {
         icon: RocketIcon, 
-        value: "10K+", 
-        label: "Projects Shared"
+        value: "500+", 
+        label: "Projects Delivered"
     },
     {
         icon: UsersIcon,
-        value: "500+", 
-        label: "Active Builders",
+        value: "200+", 
+        label: "Happy Clients",
         hasborder: true,
     },
     {
         icon: EyeIcon, 
         value: "98%", 
-        label: "Satisfaction Rate"
+        label: "Client Satisfaction"
     }
-
-
 ];
 export default function HeroSection() {
     return (
@@ -50,24 +48,20 @@ export default function HeroSection() {
             <div className="flex flex-col items-center justify-center lg:py-24 py-12 text-center">
       <LiveBadge />
       <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold
-      tracking-tight mb-6 max-w-5xl">Share What You&apos;ve Built, Discover What &apos;s Launching</h1>
+      tracking-tight mb-6 max-w-5xl">We Build Digital Products That Drive Results</h1>
         <p className="text-lg sm:text-xl text-muted-foreground mb-10
-        max-w-2xl leading-relaxed">A community platform for creators to showcase their
-          apps, AI tools, Saas
-          products, and creative projects. Authentic lauches,
-          real builders,
-          genuine feedback.
+        max-w-2xl leading-relaxed">TechTokha is a full-service digital agency specializing in web development, UI/UX design, branding, and custom software solutions. Let&apos;s turn your vision into reality.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
            <Button asChild size="lg"
           className="text-base px-8 shadow-lg">
-            <Link rel="stylesheet" href="/submit"> 
+            <Link rel="stylesheet" href="/contact"> 
             <SparklesIcon className="size-5"/>
-            Share Your Project
+            Start a Project
           </Link>
           </Button>
           <Button asChild size="lg" className="text-base px-8 shadow-lg" variant="secondary">
-            <Link rel="stylesheet" href="/explore">Explore Project <ArrowRightIcon className="size-5"/></Link>
+            <Link rel="stylesheet" href="/work">View Our Work <ArrowRightIcon className="size-5"/></Link>
           </Button>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 max-w-2xl w-full">

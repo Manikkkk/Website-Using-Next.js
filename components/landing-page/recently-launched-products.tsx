@@ -60,8 +60,8 @@ export default function RecentlyLunchedProducts() {
         <section className="py-20">
             <div className="wrapper">
                 <SectionHeader
-                title="Recently Launched"
-                description="Discover the latest products launched on our platform. Explore innovative solutions and stay ahead with the newest trends in technology and design."
+                title="Recent Projects"
+                description="A look at our latest work. From startups to enterprises, see how TechTokha delivers impactful digital solutions."
                 icon={RocketIcon}
                 />
 
@@ -72,7 +72,7 @@ export default function RecentlyLunchedProducts() {
                     )}
                  </div>
                 ) : (
-                    <EmpltyState message="No products launched in the last week. Check back later!" icon={CalendarIcon} />
+                    <EmpltyState message="New projects coming soon. Stay tuned!" icon={CalendarIcon} />
                 )}
             </div>
         </section>

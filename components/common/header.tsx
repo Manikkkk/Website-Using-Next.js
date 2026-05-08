@@ -9,7 +9,7 @@ const Logo = () => {
         <div className="size-8 rounded-lg bg-primary flex items-center justify-center">
             <SparkleIcon className="size-4 text-primary-foreground" />
         </div>
-        <span className="text-lg font-bold">i<span className="text-purple-600">Built</span>This</span>
+        <span className="text-lg font-bold">Tech<span className="text-purple-600">Tokha</span></span>
     </Link>
 }
 
@@ -28,9 +28,13 @@ export default function Header() {
                             <HomeIcon className="size-4" />
                             <span>Home</span>
                         </Link>
-                        <Link href="/explore" className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
+                        <Link href="/services" className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
                             <CompassIcon className="size-4" />
-                            <span>Explore</span>
+                            <span>Services</span>
+                        </Link>
+                        <Link href="/work" className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
+                            <SparkleIcon className="size-4" />
+                            <span>Our Work</span>
                         </Link>
                     </nav>
 
@@ -39,9 +43,9 @@ export default function Header() {
                         {isSignedIn ? (
                             <>
                                 <Button asChild>
-                                    <Link href="/submit">
+                                    <Link href="/contact">
                                         <SparkleIcon className="size-4" />
-                                        Submit Project
+                                        Get a Quote
                                     </Link>
                                 </Button>
                                 <Button variant="ghost">
@@ -69,17 +73,21 @@ export default function Header() {
                             <HomeIcon className="size-4" />
                             <span>Home</span>
                         </Link>
-                        <Link href="/explore" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
+                        <Link href="/services" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
                             <CompassIcon className="size-4" />
-                            <span>Explore</span>
+                            <span>Services</span>
+                        </Link>
+                        <Link href="/work" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50">
+                            <SparkleIcon className="size-4" />
+                            <span>Our Work</span>
                         </Link>
                         <div className="flex items-center gap-3 px-3 pt-2">
                             {isSignedIn ? (
                                 <>
                                     <Button asChild>
-                                        <Link href="/submit" onClick={() => setMenuOpen(false)}>
+                                        <Link href="/contact" onClick={() => setMenuOpen(false)}>
                                             <SparkleIcon className="size-4" />
-                                            Submit Project
+                                            Get a Quote
                                         </Link>
                                     </Button>
                                     <Button variant="ghost">

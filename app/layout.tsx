@@ -9,8 +9,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "iBuiltThis - Discover and Share Your Creations",
-  description: "A community platform for creators to showcase their apps, AI tools, Saas products, and creative projects. Authentic lauches, real builders, genuine feedback.",
+  title: "TechTokha - Digital Agency",
+  description: "TechTokha is a full-service digital agency specializing in web development, UI/UX design, branding, and custom software solutions.",
 };
 
 export default function RootLayout({

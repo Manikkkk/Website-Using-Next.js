@@ -7,51 +7,50 @@ import ProductCard from "@/components/products/product-card";
 const FeaturedProducts = [
     {
         id: 1,
-        name: "Paritykit AI Image Generator",
-        description: "Create stunning images with AI",
-        tags: ["AI", "Design", "Creativity"],
+        name: "Brand Identity Design",
+        description: "Complete branding package — logo, colors, typography & guidelines",
+        tags: ["Branding", "Design"],
         votes: 1200,
         isFeatured: true,
-
     },
     {
         id: 2,
-        name: "Project Management Tool",
-        description: "Organize your team's work",
-        tags: ["Productivity", "Team Collaboration"],
-        votes: 850,
+        name: "Custom Web Development",
+        description: "Scalable, fast and modern websites built with Next.js & Tailwind",
+        tags: ["Web Dev", "Next.js"],
+        votes: 980,
         isFeatured: false,
     },
     {
         id: 3,
-        name: "Social Media Scheduler",
-        description: "Schedule posts across all platforms",
-        tags: ["Social Media", "Scheduling"],
-        votes: 600,
+        name: "UI/UX Design System",
+        description: "User-centered design systems that improve product experience",
+        tags: ["UI/UX", "Figma"],
+        votes: 860,
         isFeatured: true,
     },
     {
         id: 4,
-        name: "Mobile Game Engine",
-        description: "Create engaging mobile games with ease",
-        tags: ["Game Development", "Mobile"],
-        votes: 900,
+        name: "Mobile App Development",
+        description: "Cross-platform mobile apps for iOS and Android using React Native",
+        tags: ["Mobile", "React Native"],
+        votes: 910,
         isFeatured: false,
     },
     {
         id: 5,
-        name: "AI-Powered Chatbot",
-        description: "Create engaging chatbots with AI",
-        tags: ["AI", "Customer Service"],
-        votes: 900,
+        name: "AI Integration Services",
+        description: "Integrate AI & automation into your existing business workflows",
+        tags: ["AI", "Automation"],
+        votes: 1050,
         isFeatured: true,
     },
     {
         id: 6,
-        name: "Intelligent Code Editor",
-        description: "Enhance your coding experience with AI assistance",
-        tags: ["Development", "Productivity"],
-        votes: 900,
+        name: "SEO & Digital Marketing",
+        description: "Data-driven SEO strategies that grow your organic traffic",
+        tags: ["SEO", "Marketing"],
+        votes: 780,
         isFeatured: false,
     },
 ]                               
@@ -61,10 +60,9 @@ export default function FeatureProducts() {
         <section className="py-20 bg-muted/20">
             <div className="wrapper">
                 <div className="flex items-center justify-between mb-8">
-                <SectionHeader title="Featured Today"
+                <SectionHeader title="Our Services"
                 icon={StarIcon} 
-                description="Check out our most popular 
-                products today!"
+                description="Explore what TechTokha offers — from design to development, we've got you covered."
                 />
                 <Button variant="outline" asChild className="hidden sm:flex">
                     <Link href="/products">
