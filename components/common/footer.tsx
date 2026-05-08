@@ -1,3 +1,4 @@
+"use client";
 import { SparkleIcon, HomeIcon, CompassIcon, PhoneIcon, MailIcon } from "lucide-react"
 import Link from "next/link";
 

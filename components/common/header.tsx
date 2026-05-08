@@ -3,6 +3,7 @@ import { SparkleIcon, HomeIcon, UserIcon, CompassIcon, MenuIcon, XIcon } from "l
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { useClerk, useAuth, UserButton } from "@clerk/nextjs";
 
 const Logo = () => {
     return <Link href="/" className="flex items-center gap-2 group">
@@ -14,7 +15,8 @@ const Logo = () => {
 }
 
 export default function Header() {
-    const isSignedIn = false;
+    const { openSignIn, openSignUp } = useClerk();
+    const { isSignedIn } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
@@ -48,14 +50,12 @@ export default function Header() {
                                         Get a Quote
                                     </Link>
                                 </Button>
-                                <Button variant="ghost">
-                                    <UserIcon className="size-4" />
-                                </Button>
+                                <UserButton />
                             </>
                         ) : (
                             <>
-                                <Button variant="ghost">Sign In</Button>
-                                <Button>Sign Up</Button>
+                                <Button variant="ghost" onClick={() => openSignIn()}>Sign In</Button>
+                                <Button onClick={() => openSignUp()}>Sign Up</Button>
                             </>
                         )}
                     </div>
@@ -90,14 +90,12 @@ export default function Header() {
                                             Get a Quote
                                         </Link>
                                     </Button>
-                                    <Button variant="ghost">
-                                        <UserIcon className="size-4" />
-                                    </Button>
+                                    <UserButton />
                                 </>
                             ) : (
                                 <>
-                                    <Button variant="ghost">Sign In</Button>
-                                    <Button>Sign Up</Button>
+                                    <Button variant="ghost" onClick={() => { openSignIn(); setMenuOpen(false); }}>Sign In</Button>
+                                    <Button onClick={() => { openSignUp(); setMenuOpen(false); }}>Sign Up</Button>
                                 </>
                             )}
                         </div>

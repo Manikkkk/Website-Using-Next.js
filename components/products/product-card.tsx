@@ -8,15 +8,14 @@ import {
     CardContent,
     CardFooter
  } from "@/components/ui/card";
-import { StarIcon } from "lucide-react";
 
 interface product {
     id: number;
-    name: string;
-    description: string;
-    tags: string[];
-    votes: number;
-    isFeatured: boolean;
+    title: string;
+    description: string | null;
+    category: string | null;
+    imageUrl: string | null;
+    link: string | null;
 }
 
 export default function ProductCard({ product }: { product: product }) 
@@ -27,9 +26,7 @@ export default function ProductCard({ product }: { product: product })
                     <div className="flex items-start gap-4">
                         <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.name}</CardTitle>
-                    {product.isFeatured && <Badge className="gap -2 bg-primary text-primary-foreground"> <StarIcon className="size-3 fill-current" /> Featured
-                        </Badge>}
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.title}</CardTitle>
                     </div>
                     <CardDescription>{product.description}</CardDescription>
                     </div>
@@ -37,9 +34,7 @@ export default function ProductCard({ product }: { product: product })
                 </CardHeader>
                 <CardFooter>
                     <div className="flex items-center gap-2">
-                    {product.tags.map((tag) => (
-                        <Badge variant="destructive" key={tag}>{tag}</Badge>
-                    ))}
+                    {product.category && <Badge variant="destructive">{product.category}</Badge>}
                     </div>
                 </CardFooter>
             </Card>
